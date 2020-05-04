@@ -3,6 +3,7 @@ import PropTypes from "prop-types";
 import styled from "styled-components";
 import Flex, { FlexItem } from "styled-flex-component";
 import FontAwesome from "react-fontawesome";
+import Store from "store";
 
 const Notification = styled.div`
   background-color: white;
@@ -55,7 +56,14 @@ const Button = styled.button`
 const NotificationPresenter = ({ id, text, seen }) => (
   <Notification seen={seen}>
     <Flex alignCenter justifyBetween>
-      <Title>{text}</Title>
+      <Title>
+        {/* appContainer에서 value 넣은 값 가져오고 싶을때, store */}
+        <Store.Consumer>
+          {/* consumer 안에는 무조건 함수만 필요 html 사용 못함 */}
+          {/* {(store) => JSON.stringify(store.stuff)} */}
+          {(store) => store.message}
+        </Store.Consumer>
+      </Title>
       <FlexItem>
         <Fragment>
           <Button success seen={seen} onClick={() => {}}>

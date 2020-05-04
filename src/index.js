@@ -18,3 +18,11 @@ ReactDOM.render(
   </>,
   document.getElementById("root")
 );
+
+/*
+  Store 사용법 
+  Store에 state를 넣어주고
+  Provider를 생성하고,
+  똑같은 store를 import
+  consumer를 사용
+*/
