@@ -21,21 +21,24 @@ class AppContainer extends Component {
   constructor(props) {
     super(props);
 
-    this._changeMessage = () => {
-      if (this.state.message === "hello") {
-        this.setState({
-          message: "Bye Bye",
-        });
-      } else {
-        this.setState({
-          message: "hello",
-        });
-      }
-    };
-
     this.state = {
-      message: "hello",
-      changeMessage: this._changeMessage,
+      notifications: {
+        "1": {
+          id: 1,
+          text: "first",
+          seen: false,
+        },
+        "2": {
+          id: 2,
+          text: "second",
+          seen: true,
+        },
+        "3": {
+          id: 3,
+          text: "three",
+          seen: false,
+        },
+      },
     };
   }
   /* constructor 사용 state를 바꾸는 함수를 만들고, provideer안에 넣기위함

@@ -58,11 +58,12 @@ const NotificationPresenter = ({ id, text, seen }) => (
     <Flex alignCenter justifyBetween>
       <Title>
         {/* appContainer에서 value 넣은 값 가져오고 싶을때, store */}
-        <Store.Consumer>
-          {/* consumer 안에는 무조건 함수만 필요 html 사용 못함 */}
-          {/* {(store) => JSON.stringify(store.stuff)} */}
-          {(store) => store.message}
-        </Store.Consumer>
+        {/*         <Store.Consumer> */}
+        {/* consumer 안에는 무조건 함수만 필요 html 사용 못함 */}
+        {/* {(store) => JSON.stringify(store.stuff)} */}
+        {/*    {(store) => store.message} */}
+        {text}
+        {/*         </Store.Consumer> */}
       </Title>
       <FlexItem>
         <Fragment>

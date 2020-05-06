@@ -25,7 +25,7 @@ const HeaderIcon = styled.span`
   transition: all 0.2s ease-out;
   position: relative;
   &:hover {
-    transform: translateY(-1px);
+    transform: translateY(-4px);
     box-shadow: 0 7px 14px rgba(50, 50, 93, 0.1), 0 3px 6px rgba(0, 0, 0, 0.08);
   }
 `;
